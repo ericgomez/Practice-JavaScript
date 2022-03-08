@@ -1,0 +1,101 @@
+/***** Reset CSS ****/
+
+:root {
+  --main-font: sanserif;
+  --font-size: 16px;
+  --main-color: #f7df1e;
+  --second-color: #222;
+  --main-modal-color: rgba(247, 223, 30, 0.8);
+  --second-modal-color: rgba(34, 34, 34, 0.8);
+  --container-width: 1200px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden; /* Hide scrollbar in horizontal position */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/***** Burger Menu ****/
+.header {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+.header h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  padding: 2rem;
+  padding-top: 4rem;
+  text-align: center;
+  width: 100%;
+}
+
+.panel {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--second-modal-color);
+  z-index: 998;
+}
+
+.panel-btn {
+  background-color: var(--main-color) !important;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 1vh;
+  right: 1vw;
+  width: 4rem;
+  height: 4rem;
+  padding: 0 !important;
+  z-index: 999;
+}
+
+.menu {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.menu a {
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-size: 1.5;
+}
